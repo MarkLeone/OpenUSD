@@ -1328,8 +1328,8 @@ function(_pxr_library NAME)
         PRIVATE
             "${PROJECT_BINARY_DIR}/include"
             "${PROJECT_BINARY_DIR}/${PXR_INSTALL_SUBDIR}/include"
-        INTERFACE
-            $<INSTALL_INTERFACE:${headerInstallDir}>
+        PUBLIC
+            $<BUILD_INTERFACE:${headerInstallDir}>
     )
 
     # The INCLUDE_DIRS argument specifies directories containing headers
